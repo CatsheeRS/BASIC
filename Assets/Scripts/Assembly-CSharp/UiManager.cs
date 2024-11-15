@@ -3,10 +3,10 @@ using MaterialKit;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020000DB RID: 219
+ 
 public class UiManager : MonoBehaviour
 {
-	// Token: 0x06000A05 RID: 2565 RVA: 0x00026C34 File Offset: 0x00025034
+	 
 	private void Start()
 	{
 		int @int = PlayerPrefs.GetInt("UiSize");
@@ -43,12 +43,12 @@ public class UiManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000735 RID: 1845
+	 
 	public CanvasScaler normScaler;
 
-	// Token: 0x04000736 RID: 1846
+	 
 	public DpCanvasScaler dpiScaler;
 
-	// Token: 0x04000737 RID: 1847
+	 
 	public RectTransform[] transforms;
 }

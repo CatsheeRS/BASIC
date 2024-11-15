@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Token: 0x020000C0 RID: 192
+ 
 public class GameControllerScript : MonoBehaviour
 {
-	// Token: 0x06000963 RID: 2403 RVA: 0x00021A00 File Offset: 0x0001FE00
+	 
 	public GameControllerScript()
 	{
 		int[] array = new int[3];
@@ -18,7 +18,7 @@ public class GameControllerScript : MonoBehaviour
 		//base..ctor();
 	}
 
-	// Token: 0x06000964 RID: 2404 RVA: 0x00021AC4 File Offset: 0x0001FEC4
+	 
 	private void Start()
 	{
 		this.cullingMask = this.camera.cullingMask; // Changes cullingMask in the Camera
@@ -35,7 +35,7 @@ public class GameControllerScript : MonoBehaviour
 		this.gameOverDelay = 0.5f;
 	}
 
-	// Token: 0x06000965 RID: 2405 RVA: 0x00021B5C File Offset: 0x0001FF5C
+	 
 	private void Update()
 	{
 		if (!this.learningActive)
@@ -145,7 +145,7 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000966 RID: 2406 RVA: 0x00021F8C File Offset: 0x0002038C
+	 
 	private void UpdateNotebookCount()
 	{
 		if (this.mode == "story")
@@ -162,14 +162,14 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000967 RID: 2407 RVA: 0x00022024 File Offset: 0x00020424
+	 
 	public void CollectNotebook()
 	{
 		this.notebooks++;
 		this.UpdateNotebookCount();
 	}
 
-	// Token: 0x06000968 RID: 2408 RVA: 0x0002203A File Offset: 0x0002043A
+	 
 	public void LockMouse()
 	{
 		if (!this.learningActive)
@@ -180,7 +180,7 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000969 RID: 2409 RVA: 0x00022065 File Offset: 0x00020465
+	 
 	public void UnlockMouse()
 	{
 		this.cursorController.UnlockCursor(); //Allow the cursor to move
@@ -188,7 +188,7 @@ public class GameControllerScript : MonoBehaviour
 		this.reticle.SetActive(false);
 	}
 
-	// Token: 0x0600096A RID: 2410 RVA: 0x00022085 File Offset: 0x00020485
+	 
 	public void PauseGame()
 	{
 		if (!this.learningActive)
@@ -202,13 +202,13 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600096B RID: 2411 RVA: 0x000220C5 File Offset: 0x000204C5
+	 
 	public void ExitGame()
 	{
 		SceneManager.LoadScene("MainMenu");
 	}
 
-	// Token: 0x0600096C RID: 2412 RVA: 0x000220D1 File Offset: 0x000204D1
+	 
 	public void UnpauseGame()
 	{
 		Time.timeScale = 1f;
@@ -217,7 +217,7 @@ public class GameControllerScript : MonoBehaviour
 		this.LockMouse();
 	}
 
-	// Token: 0x0600096D RID: 2413 RVA: 0x000220F8 File Offset: 0x000204F8
+	 
 	public void ActivateSpoopMode()
 	{
 		this.spoopMode = true; //Tells the game its time for spooky
@@ -239,7 +239,7 @@ public class GameControllerScript : MonoBehaviour
 		this.schoolMusic.Stop();
 	}
 
-	// Token: 0x0600096E RID: 2414 RVA: 0x000221BF File Offset: 0x000205BF
+	 
 	private void ActivateFinaleMode()
 	{
 		this.finaleMode = true;
@@ -249,7 +249,7 @@ public class GameControllerScript : MonoBehaviour
 		this.entrance_3.Raise();
 	}
 
-	// Token: 0x0600096F RID: 2415 RVA: 0x000221F4 File Offset: 0x000205F4
+	 
 	public void GetAngry(float value) //Make Baldi get angry
 	{
 		if (!this.spoopMode)
@@ -259,7 +259,7 @@ public class GameControllerScript : MonoBehaviour
 		this.baldiScrpt.GetAngry(value);
 	}
 
-	// Token: 0x06000970 RID: 2416 RVA: 0x00022214 File Offset: 0x00020614
+	 
 	public void ActivateLearningGame()
 	{
 		//this.camera.cullingMask = 0; //Sets the cullingMask to nothing
@@ -273,7 +273,7 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000971 RID: 2417 RVA: 0x00022278 File Offset: 0x00020678
+	 
 	public void DeactivateLearningGame(GameObject subject)
 	{
 		this.camera.cullingMask = this.cullingMask; //Sets the cullingMask to Everything
@@ -300,7 +300,7 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000972 RID: 2418 RVA: 0x00022360 File Offset: 0x00020760
+	 
 	private void IncreaseItemSelection()
 	{
 		this.itemSelected++;
@@ -312,7 +312,7 @@ public class GameControllerScript : MonoBehaviour
 		this.UpdateItemName();
 	}
 
-	// Token: 0x06000973 RID: 2419 RVA: 0x000223C4 File Offset: 0x000207C4
+	 
 	private void DecreaseItemSelection()
 	{
 		this.itemSelected--;
@@ -324,14 +324,14 @@ public class GameControllerScript : MonoBehaviour
 		this.UpdateItemName();
 	}
 
-	// Token: 0x06000974 RID: 2420 RVA: 0x00022425 File Offset: 0x00020825
+	 
 	private void UpdateItemSelection()
 	{
 		this.itemSelect.anchoredPosition = new Vector3((float)this.itemSelectOffset[this.itemSelected], 0f, 0f); //Moves the item selector background(the red rectangle)
 		this.UpdateItemName();
 	}
 
-	// Token: 0x06000975 RID: 2421 RVA: 0x0002245C File Offset: 0x0002085C
+	 
 	public void CollectItem(int item_ID)
 	{
 		if (this.item[0] == 0)
@@ -357,7 +357,7 @@ public class GameControllerScript : MonoBehaviour
 		this.UpdateItemName();
 	}
 
-	// Token: 0x06000976 RID: 2422 RVA: 0x00022528 File Offset: 0x00020928
+	 
 	private void UseItem()
 	{
 		if (this.item[this.itemSelected] != 0)
@@ -474,7 +474,7 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000977 RID: 2423 RVA: 0x00022B40 File Offset: 0x00020F40
+	 
 	private IEnumerator BootAnimation()
 	{
 		float time = 15f;
@@ -515,7 +515,7 @@ public class GameControllerScript : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000978 RID: 2424 RVA: 0x00022B5B File Offset: 0x00020F5B
+	 
 	private void ResetItem()
 	{
 		this.item[this.itemSelected] = 0;
@@ -523,7 +523,7 @@ public class GameControllerScript : MonoBehaviour
 		this.UpdateItemName();
 	}
 
-	// Token: 0x06000979 RID: 2425 RVA: 0x00022B8B File Offset: 0x00020F8B
+	 
 	public void LoseItem(int id)
 	{
 		this.item[id] = 0;
@@ -531,13 +531,13 @@ public class GameControllerScript : MonoBehaviour
 		this.UpdateItemName();
 	}
 
-	// Token: 0x0600097A RID: 2426 RVA: 0x00022BB1 File Offset: 0x00020FB1
+	 
 	private void UpdateItemName()
 	{
 		this.itemText.text = this.itemNames[this.item[this.itemSelected]];
 	}
 
-	// Token: 0x0600097B RID: 2427 RVA: 0x00022BD4 File Offset: 0x00020FD4
+	 
 	public void ExitReached()
 	{
 		this.exitsReached++;
@@ -565,13 +565,13 @@ public class GameControllerScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600097C RID: 2428 RVA: 0x00022CC1 File Offset: 0x000210C1
+	 
 	public void DespawnCrafters()
 	{
 		this.crafters.SetActive(false); //Make Arts And Crafters Inactive
 	}
 
-	// Token: 0x0600097D RID: 2429 RVA: 0x00022CD0 File Offset: 0x000210D0
+	 
 	public void Fliparoo()
 	{
 		this.player.height = 6f;
@@ -580,127 +580,127 @@ public class GameControllerScript : MonoBehaviour
 		Camera.main.GetComponent<CameraScript>().offset = new Vector3(0f, -1f, 0f);
 	}
 
-	// Token: 0x040005F7 RID: 1527
+	 
 	public CursorControllerScript cursorController;
 
-	// Token: 0x040005F8 RID: 1528
+	 
 	public PlayerScript player;
 
-	// Token: 0x040005F9 RID: 1529
+	 
 	public Transform playerTransform;
 
-	// Token: 0x040005FA RID: 1530
+	 
 	public Transform cameraTransform;
 
-	// Token: 0x040005FB RID: 1531
+	 
 	public Camera camera;
 
-	// Token: 0x040005FC RID: 1532
+	 
 	private int cullingMask;
 
-	// Token: 0x040005FD RID: 1533
+	 
 	public EntranceScript entrance_0;
 
-	// Token: 0x040005FE RID: 1534
+	 
 	public EntranceScript entrance_1;
 
-	// Token: 0x040005FF RID: 1535
+	 
 	public EntranceScript entrance_2;
 
-	// Token: 0x04000600 RID: 1536
+	 
 	public EntranceScript entrance_3;
 
-	// Token: 0x04000601 RID: 1537
+	 
 	public GameObject baldiTutor;
 
-	// Token: 0x04000602 RID: 1538
+	 
 	public GameObject baldi;
 
-	// Token: 0x04000603 RID: 1539
+	 
 	public BaldiScript baldiScrpt;
 
-	// Token: 0x04000604 RID: 1540
+	 
 	public AudioClip aud_Prize;
 
-	// Token: 0x04000605 RID: 1541
+	 
 	public AudioClip aud_PrizeMobile;
 
-	// Token: 0x04000606 RID: 1542
+	 
 	public AudioClip aud_AllNotebooks;
 
-	// Token: 0x04000607 RID: 1543
+	 
 	public GameObject principal;
 
-	// Token: 0x04000608 RID: 1544
+	 
 	public GameObject crafters;
 
-	// Token: 0x04000609 RID: 1545
+	 
 	public GameObject playtime;
 
-	// Token: 0x0400060A RID: 1546
+	 
 	public PlaytimeScript playtimeScript;
 
-	// Token: 0x0400060B RID: 1547
+	 
 	public GameObject gottaSweep;
 
-	// Token: 0x0400060C RID: 1548
+	 
 	public GameObject bully;
 
-	// Token: 0x0400060D RID: 1549
+	 
 	public GameObject firstPrize;
 
-	// Token: 0x0400060D RID: 1549
+	 
 	public GameObject TestEnemy;
 
-	// Token: 0x0400060E RID: 1550
+	 
 	public FirstPrizeScript firstPrizeScript;
 
-	// Token: 0x0400060F RID: 1551
+	 
 	public GameObject quarter;
 
-	// Token: 0x04000610 RID: 1552
+	 
 	public AudioSource tutorBaldi;
 
-	// Token: 0x04000611 RID: 1553
+	 
 	public RectTransform boots;
 
-	// Token: 0x04000612 RID: 1554
+	 
 	public string mode;
 
-	// Token: 0x04000613 RID: 1555
+	 
 	public int notebooks;
 
-	// Token: 0x04000614 RID: 1556
+	 
 	public GameObject[] notebookPickups;
 
-	// Token: 0x04000615 RID: 1557
+	 
 	public int failedNotebooks;
 
-	// Token: 0x04000616 RID: 1558
+	 
 	public bool spoopMode;
 
-	// Token: 0x04000617 RID: 1559
+	 
 	public bool finaleMode;
 
-	// Token: 0x04000618 RID: 1560
+	 
 	public bool debugMode;
 
-	// Token: 0x04000619 RID: 1561
+	 
 	public bool mouseLocked;
 
-	// Token: 0x0400061A RID: 1562
+	 
 	public int exitsReached;
 
-	// Token: 0x0400061B RID: 1563
+	 
 	public int itemSelected;
 
-	// Token: 0x0400061C RID: 1564
+	 
 	public int[] item = new int[3];
 
-	// Token: 0x0400061D RID: 1565
+	 
 	public RawImage[] itemSlot = new RawImage[3];
 
-	// Token: 0x0400061E RID: 1566
+	 
 	private string[] itemNames = new string[]
 	{
 		"Nothing",
@@ -716,87 +716,87 @@ public class GameControllerScript : MonoBehaviour
 		"Big Ol' Boots"
 	};
 
-	// Token: 0x0400061F RID: 1567
+	 
 	public TMP_Text itemText;
 
-	// Token: 0x04000620 RID: 1568
+	 
 	public UnityEngine.Object[] items = new UnityEngine.Object[10];
 
-	// Token: 0x04000621 RID: 1569
+	 
 	public Texture[] itemTextures = new Texture[10];
 
-	// Token: 0x04000622 RID: 1570
+	 
 	public GameObject bsodaSpray;
 
-	// Token: 0x04000623 RID: 1571
+	 
 	public GameObject alarmClock;
 
-	// Token: 0x04000624 RID: 1572
+	 
 	public TMP_Text notebookCount;
 
-	// Token: 0x04000625 RID: 1573
+	 
 	public GameObject pauseMenu;
 
-	// Token: 0x04000626 RID: 1574
+	 
 	public GameObject highScoreText;
 
-	// Token: 0x04000627 RID: 1575
+	 
 	public GameObject warning;
 
-	// Token: 0x04000628 RID: 1576
+	 
 	public GameObject reticle;
 
-	// Token: 0x04000629 RID: 1577
+	 
 	public RectTransform itemSelect;
 
-	// Token: 0x0400062A RID: 1578
+	 
 	private int[] itemSelectOffset;
 
-	// Token: 0x0400062B RID: 1579
+	 
 	private bool gamePaused;
 
-	// Token: 0x0400062C RID: 1580
+	 
 	private bool learningActive;
 
-	// Token: 0x0400062D RID: 1581
+	 
 	private float gameOverDelay;
 
-	// Token: 0x0400062E RID: 1582
+	 
 	private AudioSource audioDevice;
 
-	// Token: 0x0400062F RID: 1583
+	 
 	public AudioClip aud_Soda;
 
-	// Token: 0x04000630 RID: 1584
+	 
 	public AudioClip aud_Spray;
 
-	// Token: 0x04000631 RID: 1585
+	 
 	public AudioClip aud_buzz;
 
-	// Token: 0x04000632 RID: 1586
+	 
 	public AudioClip aud_Hang;
 
-	// Token: 0x04000633 RID: 1587
+	 
 	public AudioClip aud_MachineQuiet;
 
-	// Token: 0x04000634 RID: 1588
+	 
 	public AudioClip aud_MachineStart;
 
-	// Token: 0x04000635 RID: 1589
+	 
 	public AudioClip aud_MachineRev;
 
-	// Token: 0x04000636 RID: 1590
+	 
 	public AudioClip aud_MachineLoop;
 
-	// Token: 0x04000637 RID: 1591
+	 
 	public AudioClip aud_Switch;
 
-	// Token: 0x04000638 RID: 1592
+	 
 	public AudioSource schoolMusic;
 
-	// Token: 0x04000639 RID: 1593
+	 
 	public AudioSource learnMusic;
 
-	// Token: 0x0400063A RID: 1594
+	 
 	//private Player playerInput;
 }

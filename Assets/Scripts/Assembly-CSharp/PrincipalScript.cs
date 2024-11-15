@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-// Token: 0x020000CD RID: 205
+ 
 public class PrincipalScript : MonoBehaviour
 {
-	// Token: 0x060009BC RID: 2492 RVA: 0x00024F6D File Offset: 0x0002336D
+	 
 	private void Start()
 	{
 		this.agent = base.GetComponent<NavMeshAgent>(); //Get the agent
@@ -13,7 +13,7 @@ public class PrincipalScript : MonoBehaviour
 		this.audioDevice = base.GetComponent<AudioSource>();
 	}
 
-	// Token: 0x060009BD RID: 2493 RVA: 0x00024F94 File Offset: 0x00023394
+	 
 	private void Update()
 	{
 		if (this.seesRuleBreak)
@@ -38,7 +38,7 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009BE RID: 2494 RVA: 0x00025048 File Offset: 0x00023448
+	 
 	private void FixedUpdate()
 	{
 		if (!this.angry) // If the principal isn't angry
@@ -68,7 +68,7 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009BF RID: 2495 RVA: 0x000251DC File Offset: 0x000235DC
+	 
 	private void Wander()
 	{
 		this.playerScript.principalBugFixer = 1;
@@ -85,14 +85,14 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009C0 RID: 2496 RVA: 0x00025268 File Offset: 0x00023668
+	 
 	private void TargetPlayer()
 	{
 		this.agent.SetDestination(this.player.position);
 		this.coolDown = 1f;
 	}
 
-	// Token: 0x060009C1 RID: 2497 RVA: 0x0002528C File Offset: 0x0002368C
+	 
 	private void TargetBully()
 	{
 		if (!this.bullySeen)
@@ -103,7 +103,7 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009C2 RID: 2498 RVA: 0x000252C8 File Offset: 0x000236C8
+	 
 	private void CorrectPlayer()
 	{
 		this.audioQueue.ClearAudioQueue();
@@ -125,7 +125,7 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009C3 RID: 2499 RVA: 0x0002539C File Offset: 0x0002379C
+	 
 	private void OnTriggerStay(Collider other)
 	{
 		if (other.name == "Office Trigger")
@@ -159,7 +159,7 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009C4 RID: 2500 RVA: 0x0002555E File Offset: 0x0002395E
+	 
 	private void OnTriggerExit(Collider other)
 	{
 		if (other.name == "Office Trigger")
@@ -172,52 +172,52 @@ public class PrincipalScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040006B8 RID: 1720
+	 
 	public bool seesRuleBreak;
 
-	// Token: 0x040006B9 RID: 1721
+	 
 	public Transform player;
 
-	// Token: 0x040006BA RID: 1722
+	 
 	public Transform bully;
 
-	// Token: 0x040006BB RID: 1723
+	 
 	public bool bullySeen;
 
-	// Token: 0x040006BC RID: 1724
+	 
 	public PlayerScript playerScript;
 
-	// Token: 0x040006BD RID: 1725
+	 
 	public BullyScript bullyScript;
 
-	// Token: 0x040006BE RID: 1726
+	 
 	public BaldiScript baldiScript;
 
-	// Token: 0x040006BF RID: 1727
+	 
 	public Transform wanderTarget;
 
-	// Token: 0x040006C0 RID: 1728
+	 
 	public AILocationSelectorScript wanderer;
 
-	// Token: 0x040006C1 RID: 1729
+	 
 	public DoorScript officeDoor;
 
-	// Token: 0x040006C2 RID: 1730
+	 
 	public float coolDown;
 
-	// Token: 0x040006C3 RID: 1731
+	 
 	public float timeSeenRuleBreak;
 
-	// Token: 0x040006C4 RID: 1732
+	 
 	public bool angry;
 
-	// Token: 0x040006C5 RID: 1733
+	 
 	public bool inOffice;
 
-	// Token: 0x040006C6 RID: 1734
+	 
 	private int detentions;
 
-	// Token: 0x040006C7 RID: 1735
+	 
 	private int[] lockTime = new int[]
 	{
 		15,
@@ -227,58 +227,58 @@ public class PrincipalScript : MonoBehaviour
 		99
 	};
 
-	// Token: 0x040006C8 RID: 1736
+	 
 	public AudioClip[] audTimes = new AudioClip[5];
 
-	// Token: 0x040006C9 RID: 1737
+	 
 	public AudioClip[] audScolds = new AudioClip[3];
 
-	// Token: 0x040006CA RID: 1738
+	 
 	public AudioClip audDetention;
 
-	// Token: 0x040006CB RID: 1739
+	 
 	public AudioClip audNoDrinking;
 
-	// Token: 0x040006CC RID: 1740
+	 
 	public AudioClip audNoBullying;
 
-	// Token: 0x040006CD RID: 1741
+	 
 	public AudioClip audNoFaculty;
 
-	// Token: 0x040006CE RID: 1742
+	 
 	public AudioClip audNoLockers;
 
-	// Token: 0x040006CF RID: 1743
+	 
 	public AudioClip audNoRunning;
 
-	// Token: 0x040006D0 RID: 1744
+	 
 	public AudioClip audNoStabbing;
 
-	// Token: 0x040006D1 RID: 1745
+	 
 	public AudioClip audNoEscaping;
 
-	// Token: 0x040006D2 RID: 1746
+	 
 	public AudioClip aud_Whistle;
 
-	// Token: 0x040006D3 RID: 1747
+	 
 	public AudioClip aud_Delay;
 
-	// Token: 0x040006D4 RID: 1748
+	 
 	private NavMeshAgent agent;
 
-	// Token: 0x040006D5 RID: 1749
+	 
 	private AudioQueueScript audioQueue;
 
-	// Token: 0x040006D6 RID: 1750
+	 
 	private AudioSource audioDevice;
 
-	// Token: 0x040006D7 RID: 1751
+	 
 	public AudioSource quietAudioDevice;
 
-	// Token: 0x040006D8 RID: 1752
+	 
 	private RaycastHit hit;
 
-	// Token: 0x040006D9 RID: 1753
+	 
 	private Vector3 aim;
 
 	public CharacterController cc;

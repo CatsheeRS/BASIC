@@ -2,10 +2,10 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-// Token: 0x020000CA RID: 202
+ 
 public class CraftersScript : MonoBehaviour
 {
-	// Token: 0x060009AE RID: 2478 RVA: 0x000249ED File Offset: 0x00022DED
+	 
 	private void Start()
 	{
 		this.agent = base.GetComponent<NavMeshAgent>(); // Defines the nav mesh agent
@@ -13,7 +13,7 @@ public class CraftersScript : MonoBehaviour
 		this.sprite.SetActive(false); // Set arts and crafters sprite to be invisible
 	}
 
-	// Token: 0x060009AF RID: 2479 RVA: 0x00024A08 File Offset: 0x00022E08
+	 
 	private void Update()
 	{
 		if (this.forceShowTime > 0f)
@@ -56,7 +56,7 @@ public class CraftersScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009B0 RID: 2480 RVA: 0x00024BAC File Offset: 0x00022FAC
+	 
 	private void FixedUpdate()
 	{
 		if (this.gc.notebooks >= 7) // If the player has more then 7 notebooks
@@ -74,7 +74,7 @@ public class CraftersScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009B1 RID: 2481 RVA: 0x00024C65 File Offset: 0x00023065
+	 
 	public void GiveLocation(Vector3 location, bool flee)
 	{
 		if (!this.angry && this.agent.isActiveAndEnabled)
@@ -87,13 +87,13 @@ public class CraftersScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060009B2 RID: 2482 RVA: 0x00024CA0 File Offset: 0x000230A0
+	 
 	private void TargetPlayer()
 	{
 		this.agent.SetDestination(this.player.position); // Set destination to the player
 	}
 
-	// Token: 0x060009B3 RID: 2483 RVA: 0x00024CBC File Offset: 0x000230BC
+	 
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player" & this.angry) // If arts is angry and is touching the player
@@ -107,60 +107,60 @@ public class CraftersScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400069D RID: 1693
+	 
 	public bool db;
 
-	// Token: 0x0400069E RID: 1694
+	 
 	public bool angry;
 
-	// Token: 0x0400069F RID: 1695
+	 
 	public bool gettingAngry;
 
-	// Token: 0x040006A0 RID: 1696
+	 
 	public float anger;
 
-	// Token: 0x040006A1 RID: 1697
+	 
 	private float forceShowTime;
 
-	// Token: 0x040006A2 RID: 1698
+	 
 	public Transform player;
 
 	public CharacterController cc;
 
-	// Token: 0x040006A3 RID: 1699
+	 
 	public Transform playerCamera;
 
-	// Token: 0x040006A4 RID: 1700
+	 
 	public Transform baldi;
 
-	// Token: 0x040006A5 RID: 1701
+	 
 	public NavMeshAgent baldiAgent;
 
-	// Token: 0x040006A6 RID: 1702
+	 
 	public GameObject sprite;
 
-	// Token: 0x040006A7 RID: 1703
+	 
 	public GameControllerScript gc;
 
-	// Token: 0x040006A8 RID: 1704
+	 
 	[SerializeField]
 	private NavMeshAgent agent;
 
-	// Token: 0x040006A9 RID: 1705
+	 
 	public Renderer craftersRenderer;
 
-	// Token: 0x040006AA RID: 1706
+	 
 	public SpriteRenderer spriteImage;
 
-	// Token: 0x040006AB RID: 1707
+	 
 	public Sprite angrySprite;
 
-	// Token: 0x040006AC RID: 1708
+	 
 	private AudioSource audioDevice;
 
-	// Token: 0x040006AD RID: 1709
+	 
 	public AudioClip aud_Intro;
 
-	// Token: 0x040006AE RID: 1710
+	 
 	public AudioClip aud_Loop;
 }

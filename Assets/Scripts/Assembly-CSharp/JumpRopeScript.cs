@@ -3,10 +3,10 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
-// Token: 0x02000015 RID: 21
+ 
 public class JumpRopeScript : MonoBehaviour
 {
-	// Token: 0x06000048 RID: 72 RVA: 0x000033A4 File Offset: 0x000017A4
+	 
 	private void OnEnable()
 	{
 		this.jumpDelay = 1f;
@@ -18,7 +18,7 @@ public class JumpRopeScript : MonoBehaviour
 		this.playtime.audioDevice.PlayOneShot(this.playtime.aud_ReadyGo);
 	}
 
-	// Token: 0x06000049 RID: 73 RVA: 0x00003418 File Offset: 0x00001818
+	 
 	private void Update()
 	{
 		if (this.jumpDelay > 0f) //Decrease jumpDelay countdown
@@ -42,7 +42,7 @@ public class JumpRopeScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600004A RID: 74 RVA: 0x000034B8 File Offset: 0x000018B8
+	 
 	private void RopeHit()
 	{
 		this.ropeHit = true; //Set ropehit to true
@@ -57,7 +57,7 @@ public class JumpRopeScript : MonoBehaviour
 		this.jumpStarted = false;
 	}
 
-	// Token: 0x0600004B RID: 75 RVA: 0x000034F0 File Offset: 0x000018F0
+	 
 	private void Success()
 	{
 		this.playtime.audioDevice.Stop(); //Stop all of the lines playtime is currently speaking
@@ -73,7 +73,7 @@ public class JumpRopeScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600004C RID: 76 RVA: 0x000035AC File Offset: 0x000019AC
+	 
 	private void Fail()
 	{
 		this.jumps = 0; //Reset jumps
@@ -82,36 +82,36 @@ public class JumpRopeScript : MonoBehaviour
 		this.playtime.audioDevice.PlayOneShot(this.playtime.aud_Oops);
 	}
 
-	// Token: 0x04000058 RID: 88
+	 
 	public TMP_Text jumpCount;
 
-	// Token: 0x04000059 RID: 89
+	 
 	public Animator rope;
 
-	// Token: 0x0400005A RID: 90
+	 
 	public CameraScript cs;
 
-	// Token: 0x0400005B RID: 91
+	 
 	public PlayerScript ps;
 
-	// Token: 0x0400005C RID: 92
+	 
 	public PlaytimeScript playtime;
 
-	// Token: 0x0400005D RID: 93
+	 
 	public GameObject mobileIns;
 
-	// Token: 0x0400005E RID: 94
+	 
 	public int jumps;
 
-	// Token: 0x0400005F RID: 95
+	 
 	public float jumpDelay;
 
-	// Token: 0x04000060 RID: 96
+	 
 	public float ropePosition;
 
-	// Token: 0x04000061 RID: 97
+	 
 	public bool ropeHit;
 
-	// Token: 0x04000062 RID: 98
+	 
 	public bool jumpStarted;
 }

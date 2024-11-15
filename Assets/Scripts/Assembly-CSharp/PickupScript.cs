@@ -2,16 +2,16 @@
 //using Rewired;
 using UnityEngine;
 
-// Token: 0x020000CF RID: 207
+ 
 public class PickupScript : MonoBehaviour
 {
-	// Token: 0x060009C9 RID: 2505 RVA: 0x000255EF File Offset: 0x000239EF
+	 
 	private void Start()
 	{
 		//this.playerInput = ReInput.players.GetPlayer(0);
 	}
 
-	// Token: 0x060009CA RID: 2506 RVA: 0x00025604 File Offset: 0x00023A04
+	 
 	private void Update()
 	{
 		if (Input.GetMouseButtonDown(0) && Time.timeScale != 0f)
@@ -74,12 +74,12 @@ public class PickupScript : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040006DB RID: 1755
+	 
 	public GameControllerScript gc;
 
-	// Token: 0x040006DC RID: 1756
+	 
 	public Transform player;
 
-	// Token: 0x040006DD RID: 1757
+	 
 	//private Player playerInput;
 }
